@@ -12,14 +12,14 @@ export default abstract class AbstractDefaultService<
     ViewType,
     CreateType,
     PatchType,
-    SearchParametersType
+    SearchParametersType,
 > {
     public authorizedApiClient: AuthorizedApiClient;
 
     constructor(
         baseURL: string,
         setUserFunction: CallableFunction,
-        resetUserFunction: CallableFunction
+        resetUserFunction: CallableFunction,
     ) {
         this.authorizedApiClient = new AuthorizedApiClient(baseURL, setUserFunction, resetUserFunction);
     }

@@ -7,7 +7,7 @@ export default abstract class AbstractDefaultService {
 
     constructor(
         setUserFunction: CallableFunction,
-        resetUserFunction: CallableFunction
+        resetUserFunction: CallableFunction,
     ) {
         this.authorizedApiClient = new AuthorizedApiClient('https://localhost:7230/build-cache', setUserFunction, resetUserFunction);
     }

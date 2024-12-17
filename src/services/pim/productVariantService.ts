@@ -1,7 +1,12 @@
-import { CreateProductVariant, PatchProductVariant, ProductVariantPaginationParameters, ViewProductVariant } from "~/interfaces/pim/productVariant";
-import AbstractDefaultService from "~/services/AbstractDefaultService";
+import {
+    CreateProductVariant,
+    PatchProductVariant,
+    ProductVariantPaginationParameters,
+    ViewProductVariant,
+} from '~/interfaces/pim/productVariant';
+import AbstractDefaultService from '~/services/AbstractDefaultService';
 
-export class ProductVariantService extends AbstractDefaultService<
+export default class ProductVariantService extends AbstractDefaultService<
     ViewProductVariant,
     CreateProductVariant,
     PatchProductVariant,
@@ -9,12 +14,12 @@ export class ProductVariantService extends AbstractDefaultService<
 > {
     constructor(
         setUserFunction: CallableFunction,
-        resetUserFunction: CallableFunction
+        resetUserFunction: CallableFunction,
     ) {
         super(
             'https://localhost:7210/product-variant',
             setUserFunction,
             resetUserFunction,
-        )
+        );
     }
 }

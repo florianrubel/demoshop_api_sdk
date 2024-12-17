@@ -2,6 +2,7 @@ import axios, { type AxiosInstance } from 'axios';
 
 export default class UnauthorizedApiClient {
     private baseURL: string;
+
     public client: AxiosInstance;
 
     constructor(baseURL: string) {

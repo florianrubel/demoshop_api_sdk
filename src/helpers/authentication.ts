@@ -1,10 +1,8 @@
-/* eslint-disable newline-per-chained-call */
 import type { AuthenticationTokenSet, TokenUser } from '~/interfaces/authentication/signIn';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/constants/tokens';
 
 export function saveTokens({
     accessToken,
-    // eslint-disable-next-line no-shadow
     refreshToken,
 }: AuthenticationTokenSet): boolean {
     if (accessToken) {

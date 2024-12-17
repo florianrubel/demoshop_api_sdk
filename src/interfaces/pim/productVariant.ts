@@ -1,4 +1,4 @@
-import type { PaginationParameters, UuidViewModel } from "~/interfaces/api";
+import type { PaginationParameters, UuidViewModel } from '~/interfaces/api';
 
 export interface ViewProductVariant extends UuidViewModel {
     priceInCents: number;
@@ -14,7 +14,7 @@ export interface CreateProductVariant {
     pictures: string[];
 }
 
-export type PatchProductVariant = Partial<Omit<CreateProductVariant, "productId">>;
+export type PatchProductVariant = Partial<Omit<CreateProductVariant, 'productId'>>;
 
 export interface ProductVariantPaginationParameters extends PaginationParameters {
     productIds?: string;

@@ -1,8 +1,8 @@
-import { SearchParameters } from "~/interfaces/api";
-import { CreateProduct, PatchProduct, ViewProduct } from "~/interfaces/pim/product";
-import AbstractDefaultService from "~/services/AbstractDefaultService";
+import { SearchParameters } from '~/interfaces/api';
+import { CreateProduct, PatchProduct, ViewProduct } from '~/interfaces/pim/product';
+import AbstractDefaultService from '~/services/AbstractDefaultService';
 
-export class ProductService extends AbstractDefaultService<
+export default class ProductService extends AbstractDefaultService<
     ViewProduct,
     CreateProduct,
     PatchProduct,
@@ -10,12 +10,12 @@ export class ProductService extends AbstractDefaultService<
 > {
     constructor(
         setUserFunction: CallableFunction,
-        resetUserFunction: CallableFunction
+        resetUserFunction: CallableFunction,
     ) {
         super(
             'https://localhost:7210/product',
             setUserFunction,
             resetUserFunction,
-        )
+        );
     }
 }

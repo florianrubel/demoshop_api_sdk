@@ -2,6 +2,7 @@
   "name": "demoshop-api-sdk",
   "version": "1.0.0",
   "description": "Interfaces and Services for all endpoints of the demoshop project.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint **/*.ts"
@@ -14,6 +15,8 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
     "@kesills/eslint-config-airbnb-typescript": "^20.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.31.0",
     "typescript": "^5.7.2"
   }
 }

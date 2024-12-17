@@ -1,8 +1,8 @@
-import { SearchParameters } from "~/interfaces/api";
-import { CreateNumericProperty, PatchNumericProperty, ViewNumericProperty } from "~/interfaces/pim/properties/numericProperty";
-import AbstractDefaultService from "~/services/AbstractDefaultService";
+import { SearchParameters } from '~/interfaces/api';
+import { CreateNumericProperty, PatchNumericProperty, ViewNumericProperty } from '~/interfaces/pim/properties/numericProperty';
+import AbstractDefaultService from '~/services/AbstractDefaultService';
 
-export class NumericPropertyService extends AbstractDefaultService<
+export default class NumericPropertyService extends AbstractDefaultService<
     ViewNumericProperty,
     CreateNumericProperty,
     PatchNumericProperty,
@@ -10,12 +10,12 @@ export class NumericPropertyService extends AbstractDefaultService<
 > {
     constructor(
         setUserFunction: CallableFunction,
-        resetUserFunction: CallableFunction
+        resetUserFunction: CallableFunction,
     ) {
         super(
             'https://localhost:7210/properties/numeric-properties',
             setUserFunction,
             resetUserFunction,
-        )
+        );
     }
 }

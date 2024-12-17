@@ -6,21 +6,13 @@ export default abstract class AbstractWithDeleteService<
     ViewType,
     CreateType,
     PatchType,
-    SearchParametersType
+    SearchParametersType,
 > extends AbstractDefaultService<
-    ViewType,
-    CreateType,
-    PatchType,
-    SearchParametersType
-> {
-    constructor(
-        baseURL: string,
-        setUserFunction: CallableFunction,
-        resetUserFunction: CallableFunction
-    ) {
-        super(baseURL, setUserFunction, resetUserFunction)
-    }
-
+        ViewType,
+        CreateType,
+        PatchType,
+        SearchParametersType
+    > {
     public async delete(deleteObjs: ViewType[]): Promise<AxiosResponse<ViewType[]>> {
         return this.authorizedApiClient.client.delete(`(${deleteObjs})`);
     }

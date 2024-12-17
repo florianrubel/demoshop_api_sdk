@@ -1,4 +1,4 @@
-import { UuidViewModel } from "~/interfaces/api";
+import { UuidViewModel } from '~/interfaces/api';
 
 export interface User extends UuidViewModel {
     id: string;

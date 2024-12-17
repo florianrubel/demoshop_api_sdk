@@ -11,7 +11,7 @@ export default abstract class UserService {
     private authorizedApiClient: AuthorizedApiClient;
 
     constructor(setUserFunction: CallableFunction, resetUserFunction: CallableFunction) {
-        this.authorizedApiClient = new AuthorizedApiClient('https://localhost:7047/api-key', setUserFunction, resetUserFunction)
+        this.authorizedApiClient = new AuthorizedApiClient('https://localhost:7047/api-key', setUserFunction, resetUserFunction);
     }
 
     public async getMultiple(params: PaginationParameters, abortSignal?: GenericAbortSignal): Promise<AxiosResponse<ViewApiKey[]>> {

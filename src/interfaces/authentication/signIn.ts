@@ -19,4 +19,4 @@ export interface TokenUser {
     iat: number;
     iss: string;
     aud: string;
-  }
+}

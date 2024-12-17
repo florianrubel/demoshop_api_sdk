@@ -1,5 +1,10 @@
 import axios, {
-    type AxiosError, type AxiosInstance, type AxiosRequestConfig, type AxiosRequestHeaders, type AxiosResponse, type InternalAxiosRequestConfig,
+    type AxiosError,
+    type AxiosInstance,
+    type AxiosRequestConfig,
+    type AxiosRequestHeaders,
+    type AxiosResponse,
+    type InternalAxiosRequestConfig,
 } from 'axios';
 
 import type { AuthenticationTokenSet } from '~/interfaces/authentication/signIn';
@@ -15,14 +20,20 @@ interface ExtendedAxiosRequestConfig extends InternalAxiosRequestConfig<unknown>
 
 export default class AuthorizedApiClient {
     private baseURL: string;
+
     private setUserFunction: CallableFunction;
+
     private resetUserFunction: CallableFunction;
 
     private unauthorizedApiClient: UnauthorizedApiClient;
 
     public client: AxiosInstance;
 
-    constructor(baseURL: string, setUserFunction: CallableFunction, resetUserFunction: CallableFunction) {
+    constructor(
+        baseURL: string,
+        setUserFunction: CallableFunction,
+        resetUserFunction: CallableFunction,
+    ) {
         this.baseURL = baseURL;
         this.setUserFunction = setUserFunction;
         this.resetUserFunction = resetUserFunction;
@@ -45,22 +56,22 @@ export default class AuthorizedApiClient {
             }
             return enrichedConfig;
         }, (error: AxiosError) => Promise.reject(error));
-        
+
         this.client.interceptors.response.use(
             (response: AxiosResponse) => response,
             (error: AxiosError) => {
                 const originalRequest: ExtendedAxiosRequestConfig = error.config || {} as ExtendedAxiosRequestConfig;
                 const isUnauthorized: boolean | undefined = error.response && error.response.status === 401;
-        
+
                 // eslint-disable-next-line no-underscore-dangle
                 if ((isUnauthorized) && originalRequest._retry !== true) {
                     // eslint-disable-next-line no-underscore-dangle
                     originalRequest._retry = true;
-        
+
                     return this.refreshToken()
                         .then(() => this.client.request(originalRequest))
                         // eslint-disable-next-line no-shadow
-                        .catch((error: AxiosError) => Promise.reject(error));
+                        .catch((refreshError: AxiosError) => Promise.reject(refreshError));
                 }
                 return Promise.reject(error);
             },
@@ -86,7 +97,7 @@ export default class AuthorizedApiClient {
             this.unauthorizedApiClient.client(options)
                 .then((response: AxiosResponse<AuthenticationTokenSet>) => {
                     saveTokens(response.data);
-                    this.setUserFunction()
+                    this.setUserFunction();
                     resolve(response);
                 })
                 .catch((error: AxiosError) => {

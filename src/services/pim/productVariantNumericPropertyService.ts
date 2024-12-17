@@ -1,7 +1,12 @@
-import { CreateProductVariantNumericProperty, PatchProductVariantNumericProperty, ProductVariantNumericPropertyPaginationParameters, ViewProductVariantNumericProperty } from "~/interfaces/pim/productVariantNumericProperty";
-import AbstractWithDeleteService from "~/services/AbstractWithDeleteService";
+import {
+    CreateProductVariantNumericProperty,
+    PatchProductVariantNumericProperty,
+    ProductVariantNumericPropertyPaginationParameters,
+    ViewProductVariantNumericProperty,
+} from '~/interfaces/pim/productVariantNumericProperty';
+import AbstractWithDeleteService from '~/services/AbstractWithDeleteService';
 
-export class ProductVariantNumericPropertyService extends AbstractWithDeleteService<
+export default class ProductVariantNumericPropertyService extends AbstractWithDeleteService<
     ViewProductVariantNumericProperty,
     CreateProductVariantNumericProperty,
     PatchProductVariantNumericProperty,
@@ -9,12 +14,12 @@ export class ProductVariantNumericPropertyService extends AbstractWithDeleteServ
 > {
     constructor(
         setUserFunction: CallableFunction,
-        resetUserFunction: CallableFunction
+        resetUserFunction: CallableFunction,
     ) {
         super(
             'https://localhost:7210/product-variant-numeric-property',
             setUserFunction,
             resetUserFunction,
-        )
+        );
     }
 }

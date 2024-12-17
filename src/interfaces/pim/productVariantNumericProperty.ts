@@ -1,4 +1,4 @@
-import { PaginationParameters, UuidViewModel } from "~/interfaces/api";
+import { PaginationParameters, UuidViewModel } from '~/interfaces/api';
 
 export interface ViewProductVariantNumericProperty extends UuidViewModel {
     productVariantId: string;
