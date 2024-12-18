@@ -1,0 +1,3 @@
+[submodule "src/sharedLib/eslintRulesets"]
+	path = src/sharedLib/eslintRulesets
+	url = git@github.com:florianrubel/eslint_rulesets.git
