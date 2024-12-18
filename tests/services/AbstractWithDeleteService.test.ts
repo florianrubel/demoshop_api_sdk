@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
 import { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
-import AbstractWithDeleteService from '~/services/AbstractWithDeleteService'; // Update the path
+import AbstractWithDeleteService from '~/services/abstractWithDeleteService'; // Update the path
 import AuthorizedApiClient from '~/clients/authorizedApiClient';
 
 vi.mock('~/clients/authorizedApiClient');

@@ -4,7 +4,7 @@ import {
     ProductVariantPaginationParameters,
     ViewProductVariant,
 } from '~/interfaces/pim/productVariant';
-import AbstractDefaultService from '~/services/AbstractDefaultService';
+import AbstractDefaultService from '~/services/abstractDefaultService';
 
 export default class ProductVariantService extends AbstractDefaultService<
     ViewProductVariant,

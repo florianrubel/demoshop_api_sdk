@@ -2,7 +2,7 @@ import { describe, it, expect, vi, Mock, beforeEach } from 'vitest';
 import { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import { PATCH_REPLACE } from '~/constants/api';
 import AuthorizedApiClient from '~/clients/authorizedApiClient';
-import AbstractDefaultService from '~/services/AbstractDefaultService'; // Update the path
+import AbstractDefaultService from '~/services/abstractDefaultService'; // Update the path
 
 vi.mock('~/clients/authorizedApiClient');
 vi.mock('~/helpers/misc', () => ({

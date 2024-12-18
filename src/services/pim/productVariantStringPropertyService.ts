@@ -4,7 +4,7 @@ import {
     ProductVariantStringPropertySearchParameters,
     ViewProductVariantStringProperty,
 } from '~/interfaces/pim/productVariantStringProperty';
-import AbstractWithDeleteService from '~/services/AbstractWithDeleteService';
+import AbstractWithDeleteService from '~/services/abstractWithDeleteService';
 
 export default class ProductVariantStringPropertyService extends AbstractWithDeleteService<
     ViewProductVariantStringProperty,

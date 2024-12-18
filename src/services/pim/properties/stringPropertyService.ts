@@ -1,6 +1,6 @@
 import { SearchParameters } from '~/interfaces/api';
 import { CreateStringProperty, PatchStringProperty, ViewStringProperty } from '~/interfaces/pim/properties/stringProperty';
-import AbstractDefaultService from '~/services/AbstractDefaultService';
+import AbstractDefaultService from '~/services/abstractDefaultService';
 
 export default class StringPropertyService extends AbstractDefaultService<
     ViewStringProperty,

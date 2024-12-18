@@ -4,7 +4,7 @@ import {
     ProductVariantNumericPropertyPaginationParameters,
     ViewProductVariantNumericProperty,
 } from '~/interfaces/pim/productVariantNumericProperty';
-import AbstractWithDeleteService from '~/services/AbstractWithDeleteService';
+import AbstractWithDeleteService from '~/services/abstractWithDeleteService';
 
 export default class ProductVariantNumericPropertyService extends AbstractWithDeleteService<
     ViewProductVariantNumericProperty,

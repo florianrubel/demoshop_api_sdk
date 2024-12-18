@@ -1,6 +1,6 @@
 import { SearchParameters } from '~/interfaces/api';
 import { CreateNumericProperty, PatchNumericProperty, ViewNumericProperty } from '~/interfaces/pim/properties/numericProperty';
-import AbstractDefaultService from '~/services/AbstractDefaultService';
+import AbstractDefaultService from '~/services/abstractDefaultService';
 
 export default class NumericPropertyService extends AbstractDefaultService<
     ViewNumericProperty,

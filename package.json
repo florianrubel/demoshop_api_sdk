@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Interfaces and Services for all endpoints of the demoshop project.",
   "type": "module",
-  "main": "src/index.ts",
   "scripts": {
     "check-ts": "npx tsc -p . --noEmit",
     "lint": "npx eslint **/*.ts",

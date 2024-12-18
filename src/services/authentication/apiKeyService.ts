@@ -7,7 +7,7 @@ import { getCleanedQueryString } from '~/helpers/misc';
 
 import AuthorizedApiClient from '~/clients/authorizedApiClient';
 
-export default abstract class ApiKeyService {
+export default class ApiKeyService {
     private authorizedApiClient: AuthorizedApiClient;
 
     constructor(setUserFunction: CallableFunction, resetUserFunction: CallableFunction) {

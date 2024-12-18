@@ -5,7 +5,7 @@ import {
     StockItemPaginationParameters,
     ViewStockItem,
 } from '~/interfaces/stock/stock';
-import AbstractDefaultService from '~/services/AbstractDefaultService';
+import AbstractDefaultService from '~/services/abstractDefaultService';
 
 export default class StockItemService extends AbstractDefaultService<
     ViewStockItem,
@@ -24,8 +24,8 @@ export default class StockItemService extends AbstractDefaultService<
         );
     }
 
-    public async patch(_patchObjs: Record<string, PatchStockItem>)
-        : Promise<AxiosResponse<Record<string, ViewStockItem>>> {
+    // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+    public async patch(patchObjs: Record<string, PatchStockItem>): Promise<AxiosResponse<Record<string, ViewStockItem>>> {
         throw new Error('not implemented');
     }
 
