@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, Mock } from 'vitest';
+import { describe, it, expect, vi, Mock, beforeEach } from 'vitest';
 import { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import { PATCH_REPLACE } from '~/constants/api';
 import AuthorizedApiClient from '~/clients/authorizedApiClient';
