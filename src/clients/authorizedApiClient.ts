@@ -9,8 +9,6 @@ import axios, {
 
 import type { AuthenticationTokenSet } from '~/interfaces/authentication/signIn';
 
-import { ACCESS_TOKEN } from '~/constants/tokens';
-
 import { getAccessToken, getRefreshToken, saveTokens } from '~/helpers/authentication';
 import UnauthorizedApiClient from '~/clients/unauthorizedApiClient';
 
@@ -48,7 +46,7 @@ export default class AuthorizedApiClient {
         });
 
         this.client.interceptors.request.use((config: InternalAxiosRequestConfig<unknown>) => {
-            const accessToken: string | null = localStorage.getItem(ACCESS_TOKEN);
+            const accessToken: string | null = getAccessToken();
             const enrichedConfig: InternalAxiosRequestConfig<unknown> = config;
             if (accessToken !== null) {
                 if (!enrichedConfig.headers) enrichedConfig.headers = {} as AxiosRequestHeaders;

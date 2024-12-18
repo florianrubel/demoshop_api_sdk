@@ -7,9 +7,10 @@
   "scripts": {
     "check-ts": "npx tsc -p . --noEmit",
     "lint": "npx eslint **/*.ts",
-    "test": "vitest run",
+    "test": "vitest run --coverage",
     "test:interactive": "vitest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "full-check": "npm run check-ts && npm run lint && npm run test"
   },
   "author": "florianrubel@display-awesome.com",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "@types/node": "^22.10.2",
     "@typescript-eslint/eslint-plugin": "^8.18.1",
     "@typescript-eslint/parser": "^8.18.1",
+    "@vitest/coverage-v8": "^2.1.8",
     "eslint": "^9.17.0",
     "eslint-import-resolver-typescript": "^3.7.0",
     "eslint-plugin-import": "^2.31.0",

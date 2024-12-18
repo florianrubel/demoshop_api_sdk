@@ -13,12 +13,13 @@
         "target": "ESNext",
         "moduleResolution": "bundler",
         "strict": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
     },
     "include": [
-        "vite.config.ts",
+        "vitest.config.ts",
         "src/**/*",
         "tests/**/*",
+        "globals.d.ts"
     ],
     "exclude": [
         "node_modules",
