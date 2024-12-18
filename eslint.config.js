@@ -1,56 +1,43 @@
-import { FlatCompat } from '@eslint/eslintrc';
-import pluginImport from "eslint-plugin-import";
+import tsParser from '@typescript-eslint/parser';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import importPlugin from 'eslint-plugin-import';
+import path from 'path';
 
-const compat = new FlatCompat({
-    baseDirectory: import.meta.dirname,
-});
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+import javascript from './src/sharedLib/eslintRulesets/javascript.js';
+import typescript from './src/sharedLib/eslintRulesets/typescript.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default [
-    ...compat.extends('airbnb-base'),
-    ...compat.extends('@kesills/airbnb-typescript/base'),
-
-    // Either way
     {
-        plugins: {
-            import: pluginImport,
-        },
+        // Explicitly match files
+        files: ['src/**/*.ts', 'src/**/*.tsx'],
         languageOptions: {
+            parser: tsParser,
             parserOptions: {
-                projectService: true,
-                tsconfigRootDir: import.meta.dirname,
+                project: path.resolve(__dirname, './tsconfig.json'), // Point to your tsconfig.json file
+                ecmaVersion: 'latest', // Latest ECMAScript features
+                sourceType: 'module',
             },
         },
-        ignores: [
-            'eslint.config.js'
-        ],
-        rules: {
-            "@stylistic/indent": ["error", 4],
-            "@typescript-eslint/no-unused-vars": [
-                "error",
-                { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
-            ],
-            "import/extensions": [
-                "error",
-                "ignorePackages",
-                {
-                    "ts": "never",
-                    "tsx": "never"
-                }
-            ],
-            "max-len": ["warn", 200],
+        plugins: {
+            '@typescript-eslint': tsPlugin,
+            import: importPlugin,
         },
         settings: {
             'import/resolver': {
-                node: {
-                    extensions: ['.ts', '.js', '.tsx', '.json'],
-                },
-                alias: {
-                    map: [
-                        ['~', './src'],
-                    ],
-                    extensions: ['.ts', '.js', '.tsx', '.json'],
+                typescript: {
+                    project: path.resolve(__dirname, './tsconfig.json') // Resolve aliases from tsconfig.json
                 },
             },
+        },
+        rules: {
+            ...javascript,
+            ...typescript,
         },
     },
 ];

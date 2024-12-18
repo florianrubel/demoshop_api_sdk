@@ -7,7 +7,7 @@ import {
 } from '~/interfaces/stock/stock';
 import AbstractDefaultService from '~/services/AbstractDefaultService';
 
-export default class StockItemmService extends AbstractDefaultService<
+export default class StockItemService extends AbstractDefaultService<
     ViewStockItem,
     CreateStockItem,
     PatchStockItem,
@@ -24,7 +24,6 @@ export default class StockItemmService extends AbstractDefaultService<
         );
     }
 
-    // eslint-disable-next-line @typescript-eslint/class-methods-use-this
     public async patch(_patchObjs: Record<string, PatchStockItem>)
         : Promise<AxiosResponse<Record<string, ViewStockItem>>> {
         throw new Error('not implemented');

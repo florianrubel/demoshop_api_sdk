@@ -2,7 +2,7 @@ import type { AxiosResponse } from 'axios';
 
 import AuthorizedApiClient from '~/clients/authorizedApiClient';
 
-export default abstract class AbstractDefaultService {
+export default class ProductCacheService {
     public authorizedApiClient: AuthorizedApiClient;
 
     constructor(

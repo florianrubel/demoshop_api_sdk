@@ -1,25 +1,19 @@
 {
-    "include": [
-        "env.d.ts",
-        "src/**/*",
-        "src/**/*.vue"
-    ],
     "compilerOptions": {
-        "noEmit": true,
-        "composite": true,
-        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-        "resolveJsonModule": true,
-        "forceConsistentCasingInFileNames": true,
-        "noUnusedLocals": true,
-        "strictNullChecks": true,
-        "module": "ESNext",
-        "moduleResolution": "Bundler",
-        "target": "ESNext",
-        "baseUrl": ".",
+        "baseUrl": ".", // Base path for resolution
         "paths": {
             "~/*": [
                 "src/*"
-            ]
+            ],
         },
+        "module": "ESNext",
+        "target": "ESNext",
+        "moduleResolution": "Node",
+        "strict": true,
+        "esModuleInterop": true
     },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": ["node_modules", "dist"]
 }

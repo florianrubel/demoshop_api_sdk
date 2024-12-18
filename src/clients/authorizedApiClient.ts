@@ -70,7 +70,6 @@ export default class AuthorizedApiClient {
 
                     return this.refreshToken()
                         .then(() => this.client.request(originalRequest))
-                        // eslint-disable-next-line no-shadow
                         .catch((refreshError: AxiosError) => Promise.reject(refreshError));
                 }
                 return Promise.reject(error);

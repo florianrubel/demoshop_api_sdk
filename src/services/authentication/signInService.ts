@@ -6,16 +6,22 @@ import type {
 
 import UnauthorizedApiClient from '~/clients/unauthorizedApiClient';
 
-const unauthorizedApiClient = new UnauthorizedApiClient('/signin');
+export default class SigninService {
+    public unauthorizedApiClient: UnauthorizedApiClient;
 
-export const signIn = async (
-    payload: SignInUser,
-): Promise<AxiosResponse<AuthenticationTokenSet>> => (
-    unauthorizedApiClient.client.post('', payload)
-);
+    constructor() {
+        this.unauthorizedApiClient = new UnauthorizedApiClient('https://localhost:7047/sign-in');
+    }
 
-export const refreshAccessToken = async (
-    payload: AuthenticationTokenSet,
-): Promise<AxiosResponse<AuthenticationTokenSet>> => (
-    unauthorizedApiClient.client.post('/refresh', payload)
-);
+    public async signIn(
+        payload: SignInUser,
+    ): Promise<AxiosResponse<AuthenticationTokenSet>> {
+        return this.unauthorizedApiClient.client.post('', payload);
+    }
+
+    public async refreshAccessToken(
+        payload: AuthenticationTokenSet,
+    ): Promise<AxiosResponse<AuthenticationTokenSet>> {
+        return this.unauthorizedApiClient.client.post('/refresh', payload);
+    }
+}
