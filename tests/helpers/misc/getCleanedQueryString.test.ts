@@ -58,6 +58,6 @@ describe('getCleanedQueryString', () => {
     it('should ignore empty objects and arrays', () => {
         const params = { emptyObj: {}, emptyArr: [], validKey: 'value' };
         const result = getCleanedQueryString(params);
-        expect(result).toBe('validKey=valuee');
+        expect(result).toBe('validKey=value');
     });
 });
