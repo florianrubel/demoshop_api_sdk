@@ -14,6 +14,11 @@ export function saveTokens({
     return true;
 }
 
+export function deleteTokens() {
+    localStorage.removeItem(ACCESS_TOKEN);
+    localStorage.removeItem(REFRESH_TOKEN);
+}
+
 export function getAccessToken(): string | null {
     return localStorage.getItem(ACCESS_TOKEN);
 }
