@@ -5,6 +5,9 @@
             "~/*": [
                 "src/*"
             ],
+            "@eslintRulesets/*": [
+                "src/sharedLib/eslintRulesets/*"
+            ],
         },
         "module": "ESNext",
         "target": "ESNext",
@@ -13,7 +16,12 @@
         "esModuleInterop": true
     },
     "include": [
-        "src/**/*"
+        "vite.config.ts",
+        "src/**/*",
+        "tests/**/*",
     ],
-    "exclude": ["node_modules", "dist"]
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
 }

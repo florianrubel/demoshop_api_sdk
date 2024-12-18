@@ -5,7 +5,9 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
-    "lint": "npx eslint **/*.ts"
+    "lint": "npx eslint **/*.ts",
+    "test": "vitest run",
+    "test:interactive": "vitest"
   },
   "author": "florianrubel@display-awesome.com",
   "license": "ISC",
@@ -13,11 +15,14 @@
     "axios": "^1.7.9"
   },
   "devDependencies": {
+    "@types/node": "^22.10.2",
     "@typescript-eslint/eslint-plugin": "^8.18.1",
     "@typescript-eslint/parser": "^8.18.1",
     "eslint": "^9.17.0",
     "eslint-import-resolver-typescript": "^3.7.0",
     "eslint-plugin-import": "^2.31.0",
-    "typescript": "^5.7.2"
+    "jsdom": "^25.0.1",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
   }
 }

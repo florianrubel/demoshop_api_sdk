@@ -2,7 +2,7 @@ import type { AxiosResponse, GenericAbortSignal } from 'axios';
 
 import type { ProductSearchRequest, ProductSearchResult } from '~/interfaces/productSearch/productSearch';
 
-import { getCleanedQueryString } from '~/helpers/api';
+import { getCleanedQueryString } from '~/helpers/misc';
 
 import UnauthorizedApiClient from '~/clients/unauthorizedApiClient';
 

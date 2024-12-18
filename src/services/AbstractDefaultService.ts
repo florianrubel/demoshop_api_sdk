@@ -4,7 +4,7 @@ import type { PatchOperation, ShapingParameters, ShapingWithOrderingParameters }
 
 import { PATCH_REPLACE } from '~/constants/api';
 
-import { getCleanedQueryString } from '~/helpers/api';
+import { getCleanedQueryString } from '~/helpers/misc';
 
 import AuthorizedApiClient from '~/clients/authorizedApiClient';
 

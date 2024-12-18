@@ -3,7 +3,7 @@ import type { AxiosResponse, GenericAbortSignal } from 'axios';
 import type { PaginationParameters } from '~/interfaces/api';
 import type { CreateApiKey, ViewApiKey } from '~/interfaces/authentication/apiKey';
 
-import { getCleanedQueryString } from '~/helpers/api';
+import { getCleanedQueryString } from '~/helpers/misc';
 
 import AuthorizedApiClient from '~/clients/authorizedApiClient';
 
