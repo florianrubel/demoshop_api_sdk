@@ -1,0 +1,3 @@
+npm run check-ts
+npm run lint
+npm run test
