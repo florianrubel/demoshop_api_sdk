@@ -16,13 +16,12 @@ export default defineConfig({
             all: true, // Include all files in coverage, even if not directly tested
             include: ['src/**/*.{ts,tsx,js,jsx}'], // Files to include in coverage
             exclude: ['node_modules', 'tests', '**/__mocks__/**'], // Files to excludecheck: {
-            // @ts-expect-error
-            global: {
-                lines: 80, // Minimum line coverage percentage
-                functions: 80, // Minimum function coverage percentage
-                branches: 75, // Minimum branch coverage percentage
-                statements: 80, // Minimum statement coverage percentage
-            },
+            thresholds: {
+                lines: 80,
+                functions: 80,
+                branches: 80,
+                statements: 80
+            }
         },
     },
 });
