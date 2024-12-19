@@ -1,5 +1,5 @@
-import type { AuthenticationTokenSet, TokenUser } from '~/interfaces/authentication/signIn';
-import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/constants/tokens';
+import type { AuthenticationTokenSet, TokenUser } from '~api/interfaces/authentication/signIn';
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '~api/constants/tokens';
 
 export function saveTokens({
     accessToken,

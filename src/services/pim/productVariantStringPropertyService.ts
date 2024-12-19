@@ -3,8 +3,8 @@ import {
     PatchProductVariantStringProperty,
     ProductVariantStringPropertySearchParameters,
     ViewProductVariantStringProperty,
-} from '~/interfaces/pim/productVariantStringProperty';
-import AbstractWithDeleteService from '~/services/abstractWithDeleteService';
+} from '~api/interfaces/pim/productVariantStringProperty';
+import AbstractWithDeleteService from '~api/services/abstractWithDeleteService';
 
 export default class ProductVariantStringPropertyService extends AbstractWithDeleteService<
     ViewProductVariantStringProperty,

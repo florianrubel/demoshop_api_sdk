@@ -1,12 +1,12 @@
 import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
 import axios, { AxiosInstance, AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
-import UnauthorizedApiClient from '~/clients/unauthorizedApiClient';
-import { getAccessToken, getRefreshToken, saveTokens } from '~/helpers/authentication';
-import AuthorizedApiClient from '~/clients/authorizedApiClient';
+import UnauthorizedApiClient from '~api/clients/unauthorizedApiClient';
+import { getAccessToken, getRefreshToken, saveTokens } from '~api/helpers/authentication';
+import AuthorizedApiClient from '~api/clients/authorizedApiClient';
 
 vi.mock('axios');
-vi.mock('~/clients/unauthorizedApiClient');
-vi.mock('~/helpers/authentication');
+vi.mock('~api/clients/unauthorizedApiClient');
+vi.mock('~api/helpers/authentication');
 
 type AuthenticationTokenSet = {
   accessToken: string;

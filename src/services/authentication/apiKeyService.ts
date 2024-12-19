@@ -1,11 +1,11 @@
 import type { AxiosResponse, GenericAbortSignal } from 'axios';
 
-import type { PaginationParameters } from '~/interfaces/api';
-import type { CreateApiKey, ViewApiKey } from '~/interfaces/authentication/apiKey';
+import type { PaginationParameters } from '~api/interfaces/api';
+import type { CreateApiKey, ViewApiKey } from '~api/interfaces/authentication/apiKey';
 
-import { getCleanedQueryString } from '~/helpers/misc';
+import { getCleanedQueryString } from '~api/helpers/misc';
 
-import AuthorizedApiClient from '~/clients/authorizedApiClient';
+import AuthorizedApiClient from '~api/clients/authorizedApiClient';
 
 export default class ApiKeyService {
     private authorizedApiClient: AuthorizedApiClient;

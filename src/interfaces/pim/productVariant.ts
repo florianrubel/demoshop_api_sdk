@@ -1,4 +1,4 @@
-import type { PaginationParameters, UuidViewModel } from '~/interfaces/api';
+import type { PaginationParameters, UuidViewModel } from '~api/interfaces/api';
 
 export interface ViewProductVariant extends UuidViewModel {
     priceInCents: number;

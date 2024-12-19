@@ -3,8 +3,8 @@ import {
     PatchProductVariant,
     ProductVariantPaginationParameters,
     ViewProductVariant,
-} from '~/interfaces/pim/productVariant';
-import AbstractDefaultService from '~/services/abstractDefaultService';
+} from '~api/interfaces/pim/productVariant';
+import AbstractDefaultService from '~api/services/abstractDefaultService';
 
 export default class ProductVariantService extends AbstractDefaultService<
     ViewProductVariant,

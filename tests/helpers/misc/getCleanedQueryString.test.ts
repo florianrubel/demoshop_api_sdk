@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getCleanedQueryString } from '~/helpers/misc';
+import { getCleanedQueryString } from '~api/helpers/misc';
 
 describe('getCleanedQueryString', () => {
     it('should return an empty string if no params are provided', () => {

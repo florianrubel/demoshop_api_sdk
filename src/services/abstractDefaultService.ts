@@ -1,12 +1,12 @@
 import type { AxiosResponse, GenericAbortSignal } from 'axios';
 
-import type { PatchOperation, ShapingParameters, ShapingWithOrderingParameters } from '~/interfaces/api';
+import type { PatchOperation, ShapingParameters, ShapingWithOrderingParameters } from '~api/interfaces/api';
 
-import { PATCH_REPLACE } from '~/constants/api';
+import { PATCH_REPLACE } from '~api/constants/api';
 
-import { getCleanedQueryString } from '~/helpers/misc';
+import { getCleanedQueryString } from '~api/helpers/misc';
 
-import AuthorizedApiClient from '~/clients/authorizedApiClient';
+import AuthorizedApiClient from '~api/clients/authorizedApiClient';
 
 export default abstract class AbstractDefaultService<
     ViewType,

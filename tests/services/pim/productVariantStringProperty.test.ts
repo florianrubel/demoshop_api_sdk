@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import AbstractWithDeleteService from '~/services/abstractWithDeleteService';
-import ProductVariantStringPropertyService from '~/services/pim/productVariantStringPropertyService';
+import AbstractWithDeleteService from '~api/services/abstractWithDeleteService';
+import ProductVariantStringPropertyService from '~api/services/pim/productVariantStringPropertyService';
 
-vi.mock('~/services/abstractWithDeleteService');
+vi.mock('~api/services/abstractWithDeleteService');
 
 describe('ProductVariantStringPropertyService', () => {
     const mockSetUserFunction = vi.fn();

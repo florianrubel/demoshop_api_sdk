@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
-import AuthorizedApiClient from '~/clients/authorizedApiClient';
-import ProductCacheService from '~/services/productCache/productCacheService';
+import AuthorizedApiClient from '~api/clients/authorizedApiClient';
+import ProductCacheService from '~api/services/productCache/productCacheService';
 
-vi.mock('~/clients/authorizedApiClient');
+vi.mock('~api/clients/authorizedApiClient');
 
 describe('ProductCacheService', () => {
     const mockSetUserFunction = vi.fn();

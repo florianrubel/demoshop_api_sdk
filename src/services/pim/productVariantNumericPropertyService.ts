@@ -3,8 +3,8 @@ import {
     PatchProductVariantNumericProperty,
     ProductVariantNumericPropertyPaginationParameters,
     ViewProductVariantNumericProperty,
-} from '~/interfaces/pim/productVariantNumericProperty';
-import AbstractWithDeleteService from '~/services/abstractWithDeleteService';
+} from '~api/interfaces/pim/productVariantNumericProperty';
+import AbstractWithDeleteService from '~api/services/abstractWithDeleteService';
 
 export default class ProductVariantNumericPropertyService extends AbstractWithDeleteService<
     ViewProductVariantNumericProperty,

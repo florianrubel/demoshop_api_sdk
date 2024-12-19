@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getTokenUser } from '~/helpers/authentication'; // Update the import path
+import { getTokenUser } from '~api/helpers/authentication'; // Update the import path
 
 describe('getTokenUser', () => {
     it('should decode a valid JWT token and return the payload', () => {

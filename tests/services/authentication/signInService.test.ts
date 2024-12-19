@@ -1,10 +1,10 @@
 import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
 import { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
-import UnauthorizedApiClient from '~/clients/unauthorizedApiClient';
-import SigninService from '~/services/authentication/signInService';
-import { AuthenticationTokenSet, SignInUser } from '~/interfaces/authentication/signIn';
+import UnauthorizedApiClient from '~api/clients/unauthorizedApiClient';
+import SigninService from '~api/services/authentication/signInService';
+import { AuthenticationTokenSet, SignInUser } from '~api/interfaces/authentication/signIn';
 
-vi.mock('~/clients/unauthorizedApiClient');
+vi.mock('~api/clients/unauthorizedApiClient');
 
 describe('SigninService', () => {
     let signinService: SigninService;

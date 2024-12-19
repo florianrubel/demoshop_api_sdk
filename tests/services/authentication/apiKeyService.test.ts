@@ -1,12 +1,12 @@
 import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
 import { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
-import AuthorizedApiClient from '~/clients/authorizedApiClient';
-import { getCleanedQueryString } from '~/helpers/misc';
-import ApiKeyService from '~/services/authentication/apiKeyService';
-import type { CreateApiKey, ViewApiKey } from '~/interfaces/authentication/apiKey';
+import AuthorizedApiClient from '~api/clients/authorizedApiClient';
+import { getCleanedQueryString } from '~api/helpers/misc';
+import ApiKeyService from '~api/services/authentication/apiKeyService';
+import type { CreateApiKey, ViewApiKey } from '~api/interfaces/authentication/apiKey';
 
-vi.mock('~/clients/authorizedApiClient');
-vi.mock('~/helpers/misc');
+vi.mock('~api/clients/authorizedApiClient');
+vi.mock('~api/helpers/misc');
 
 describe('ApiKeyService', () => {
     const mockSetUserFunction = vi.fn();

@@ -1,11 +1,11 @@
 import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
 import { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
-import AuthorizedApiClient from '~/clients/authorizedApiClient';
-import { getCleanedQueryString } from '~/helpers/misc';
-import UserService from '~/services/authentication/identity/userService';
+import AuthorizedApiClient from '~api/clients/authorizedApiClient';
+import { getCleanedQueryString } from '~api/helpers/misc';
+import UserService from '~api/services/authentication/identity/userService';
 
-vi.mock('~/clients/authorizedApiClient');
-vi.mock('~/helpers/misc');
+vi.mock('~api/clients/authorizedApiClient');
+vi.mock('~api/helpers/misc');
 
 interface User {
   id: string;

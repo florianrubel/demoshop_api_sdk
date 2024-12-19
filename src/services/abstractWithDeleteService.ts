@@ -1,6 +1,6 @@
 import type { AxiosResponse } from 'axios';
 
-import AbstractDefaultService from '~/services/abstractDefaultService';
+import AbstractDefaultService from '~api/services/abstractDefaultService';
 
 export default abstract class AbstractWithDeleteService<
     ViewType,

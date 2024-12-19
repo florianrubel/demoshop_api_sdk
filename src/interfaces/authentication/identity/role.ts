@@ -1,4 +1,4 @@
-import type { UuidViewModel } from '~/interfaces/api';
+import type { UuidViewModel } from '~api/interfaces/api';
 
 export interface Role extends UuidViewModel {
     name: string;

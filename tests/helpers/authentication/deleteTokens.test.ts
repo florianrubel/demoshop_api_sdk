@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/constants/tokens';
-import { deleteTokens } from '~/helpers/authentication';
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '~api/constants/tokens';
+import { deleteTokens } from '~api/helpers/authentication';
 
 // Mock the localStorage
 const mockRemoveItem = vi.fn();

@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import type { AuthenticationTokenSet } from '~/interfaces/authentication/signIn';
-import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/constants/tokens';
-import { saveTokens } from '~/helpers/authentication';
+import type { AuthenticationTokenSet } from '~api/interfaces/authentication/signIn';
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '~api/constants/tokens';
+import { saveTokens } from '~api/helpers/authentication';
 
 // Mock the localStorage
 const mockSetItem = vi.fn();

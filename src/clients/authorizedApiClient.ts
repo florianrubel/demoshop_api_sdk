@@ -7,10 +7,10 @@ import axios, {
     type InternalAxiosRequestConfig,
 } from 'axios';
 
-import type { AuthenticationTokenSet } from '~/interfaces/authentication/signIn';
+import type { AuthenticationTokenSet } from '~api/interfaces/authentication/signIn';
 
-import { getAccessToken, getRefreshToken, saveTokens } from '~/helpers/authentication';
-import UnauthorizedApiClient from '~/clients/unauthorizedApiClient';
+import { getAccessToken, getRefreshToken, saveTokens } from '~api/helpers/authentication';
+import UnauthorizedApiClient from '~api/clients/unauthorizedApiClient';
 
 interface ExtendedAxiosRequestConfig extends InternalAxiosRequestConfig<unknown> {
     _retry?: boolean;

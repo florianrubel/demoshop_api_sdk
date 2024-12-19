@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { isObject } from '~/helpers/misc';
+import { isObject } from '~api/helpers/misc';
 
 describe('isObject', () => {
     it('should return true for plain objects', () => {

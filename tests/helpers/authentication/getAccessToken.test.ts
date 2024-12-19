@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { ACCESS_TOKEN } from '~/constants/tokens';
-import { getAccessToken } from '~/helpers/authentication';
+import { ACCESS_TOKEN } from '~api/constants/tokens';
+import { getAccessToken } from '~api/helpers/authentication';
 
 // Mock the localStorage
 const mockGetItem = vi.fn();

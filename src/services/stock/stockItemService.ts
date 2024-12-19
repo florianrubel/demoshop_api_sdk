@@ -4,8 +4,8 @@ import {
     PatchStockItem,
     StockItemPaginationParameters,
     ViewStockItem,
-} from '~/interfaces/stock/stock';
-import AbstractDefaultService from '~/services/abstractDefaultService';
+} from '~api/interfaces/stock/stock';
+import AbstractDefaultService from '~api/services/abstractDefaultService';
 
 export default class StockItemService extends AbstractDefaultService<
     ViewStockItem,

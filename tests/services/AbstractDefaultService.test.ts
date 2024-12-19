@@ -1,11 +1,11 @@
 import { describe, it, expect, vi, Mock, beforeEach } from 'vitest';
 import { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
-import { PATCH_REPLACE } from '~/constants/api';
-import AuthorizedApiClient from '~/clients/authorizedApiClient';
-import AbstractDefaultService from '~/services/abstractDefaultService'; // Update the path
+import { PATCH_REPLACE } from '~api/constants/api';
+import AuthorizedApiClient from '~api/clients/authorizedApiClient';
+import AbstractDefaultService from '~api/services/abstractDefaultService'; // Update the path
 
-vi.mock('~/clients/authorizedApiClient');
-vi.mock('~/helpers/misc', () => ({
+vi.mock('~api/clients/authorizedApiClient');
+vi.mock('~api/helpers/misc', () => ({
     getCleanedQueryString: vi.fn((_params) => 'mockedQueryString'),
 }));
 

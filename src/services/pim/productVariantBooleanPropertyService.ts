@@ -3,8 +3,8 @@ import {
     PatchProductVariantBooleanProperty,
     ProductVariantBooleanPropertyPaginationParameters,
     ViewProductVariantBooleanProperty,
-} from '~/interfaces/pim/productVariantBooleanProperty';
-import AbstractWithDeleteService from '~/services/abstractWithDeleteService';
+} from '~api/interfaces/pim/productVariantBooleanProperty';
+import AbstractWithDeleteService from '~api/services/abstractWithDeleteService';
 
 export default class ProductVariantBooleanPropertyService extends AbstractWithDeleteService<
     ViewProductVariantBooleanProperty,

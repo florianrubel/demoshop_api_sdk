@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { isBoolean } from '~/helpers/misc';
+import { isBoolean } from '~api/helpers/misc';
 
 describe('isBoolean', () => {
     it('should return true for boolean primitives', () => {

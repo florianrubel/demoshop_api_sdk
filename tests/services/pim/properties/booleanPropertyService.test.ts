@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import AbstractDefaultService from '~/services/abstractDefaultService';
-import BooleanPropertyService from '~/services/pim/properties/booleanPropertyService';
+import AbstractDefaultService from '~api/services/abstractDefaultService';
+import BooleanPropertyService from '~api/services/pim/properties/booleanPropertyService';
 
-vi.mock('~/services/abstractDefaultService');
+vi.mock('~api/services/abstractDefaultService');
 
 describe('BooleanPropertyService', () => {
     const mockSetUserFunction = vi.fn();

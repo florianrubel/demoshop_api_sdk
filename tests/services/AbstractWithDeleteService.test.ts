@@ -1,9 +1,9 @@
 import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
 import { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
-import AbstractWithDeleteService from '~/services/abstractWithDeleteService'; // Update the path
-import AuthorizedApiClient from '~/clients/authorizedApiClient';
+import AbstractWithDeleteService from '~api/services/abstractWithDeleteService'; // Update the path
+import AuthorizedApiClient from '~api/clients/authorizedApiClient';
 
-vi.mock('~/clients/authorizedApiClient');
+vi.mock('~api/clients/authorizedApiClient');
 
 type ViewType = { id: string; name: string };
 type CreateType = { name: string };

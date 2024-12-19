@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { isNumber } from '~/helpers/misc';
+import { isNumber } from '~api/helpers/misc';
 
 describe('isNumber', () => {
     it('should return true for finite numbers', () => {

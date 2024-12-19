@@ -1,6 +1,6 @@
 import type { AxiosResponse } from 'axios';
 
-import AuthorizedApiClient from '~/clients/authorizedApiClient';
+import AuthorizedApiClient from '~api/clients/authorizedApiClient';
 
 export default class ProductCacheService {
     public authorizedApiClient: AuthorizedApiClient;

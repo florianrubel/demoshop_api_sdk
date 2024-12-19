@@ -1,11 +1,11 @@
 import type { AxiosResponse, GenericAbortSignal } from 'axios';
 
-import type { SearchParameters, ShapingParameters, ShapingWithOrderingParameters } from '~/interfaces/api';
-import type { User } from '~/interfaces/authentication/identity/user';
+import type { SearchParameters, ShapingParameters, ShapingWithOrderingParameters } from '~api/interfaces/api';
+import type { User } from '~api/interfaces/authentication/identity/user';
 
-import { getCleanedQueryString } from '~/helpers/misc';
+import { getCleanedQueryString } from '~api/helpers/misc';
 
-import AuthorizedApiClient from '~/clients/authorizedApiClient';
+import AuthorizedApiClient from '~api/clients/authorizedApiClient';
 
 export default class UserService {
     private authorizedApiClient: AuthorizedApiClient;

@@ -1,10 +1,10 @@
 import type { AxiosResponse, GenericAbortSignal } from 'axios';
 
-import type { ProductSearchRequest, ProductSearchResult } from '~/interfaces/productSearch/productSearch';
+import type { ProductSearchRequest, ProductSearchResult } from '~api/interfaces/productSearch/productSearch';
 
-import { getCleanedQueryString } from '~/helpers/misc';
+import { getCleanedQueryString } from '~api/helpers/misc';
 
-import UnauthorizedApiClient from '~/clients/unauthorizedApiClient';
+import UnauthorizedApiClient from '~api/clients/unauthorizedApiClient';
 
 export default class ProductSearchService {
     public unauthorizedApiClient: UnauthorizedApiClient;

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { isArray } from '~/helpers/misc';
+import { isArray } from '~api/helpers/misc';
 
 describe('isArray', () => {
     it('should return true for empty arrays', () => {

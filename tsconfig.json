@@ -2,10 +2,10 @@
     "compilerOptions": {
         "baseUrl": ".", // Base path for resolution
         "paths": {
-            "~/*": [
+            "~api/*": [
                 "src/*"
             ],
-            "@eslintRulesets/*": [
+            "~eslintRulesets/*": [
                 "src/sharedLib/eslintRulesets/*"
             ],
         },

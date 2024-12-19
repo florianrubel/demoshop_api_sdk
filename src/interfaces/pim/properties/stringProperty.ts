@@ -1,4 +1,4 @@
-import type { UuidViewModel } from '~/interfaces/api';
+import type { UuidViewModel } from '~api/interfaces/api';
 
 export interface ViewStringProperty extends UuidViewModel {
     name: string;

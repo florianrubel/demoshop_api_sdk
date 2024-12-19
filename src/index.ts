@@ -1,4 +1,4 @@
-import StockItemService from '~/services/stock/stockItemService';
+import StockItemService from '~api/services/stock/stockItemService';
 
 var service = new StockItemService(
     () => {},

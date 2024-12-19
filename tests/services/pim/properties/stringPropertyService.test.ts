@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import AbstractDefaultService from '~/services/abstractDefaultService';
-import StringPropertyService from '~/services/pim/properties/stringPropertyService';
+import AbstractDefaultService from '~api/services/abstractDefaultService';
+import StringPropertyService from '~api/services/pim/properties/stringPropertyService';
 
-vi.mock('~/services/abstractDefaultService');
+vi.mock('~api/services/abstractDefaultService');
 
 describe('StringPropertyService', () => {
     const mockSetUserFunction = vi.fn();

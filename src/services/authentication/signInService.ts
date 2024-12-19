@@ -2,9 +2,9 @@ import { type AxiosResponse } from 'axios';
 
 import type {
     AuthenticationTokenSet, SignInUser,
-} from '~/interfaces/authentication/signIn';
+} from '~api/interfaces/authentication/signIn';
 
-import UnauthorizedApiClient from '~/clients/unauthorizedApiClient';
+import UnauthorizedApiClient from '~api/clients/unauthorizedApiClient';
 
 export default class SigninService {
     public unauthorizedApiClient: UnauthorizedApiClient;

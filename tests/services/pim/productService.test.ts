@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import AbstractDefaultService from '~/services/abstractDefaultService';
-import ProductService from '~/services/pim/productService';
+import AbstractDefaultService from '~api/services/abstractDefaultService';
+import ProductService from '~api/services/pim/productService';
 
-vi.mock('~/services/abstractDefaultService');
+vi.mock('~api/services/abstractDefaultService');
 
 describe('ProductService', () => {
     const mockSetUserFunction = vi.fn();
