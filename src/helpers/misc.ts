@@ -1,3 +1,9 @@
+import { v4 as uuidv4 } from 'uuid';
+
+export function getUniqueId(): string {
+    return `_${uuidv4()}`;
+}
+
 export function isObject(value: unknown): value is object {
     return Object.prototype.toString.call(value) === '[object Object]';
 }
