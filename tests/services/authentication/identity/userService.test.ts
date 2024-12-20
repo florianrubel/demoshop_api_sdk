@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
-import { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import { describe, it, expect, vi, beforeEach, type Mock } from 'vitest';
+import { type AxiosResponse, type InternalAxiosRequestConfig } from 'axios';
 import AuthorizedApiClient from '~api/clients/authorizedApiClient';
 import { getCleanedQueryString } from '~api/helpers/misc';
 import UserService from '~api/services/authentication/identity/userService';

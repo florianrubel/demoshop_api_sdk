@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
+import { describe, it, expect, vi, beforeEach, type Mock } from 'vitest';
 import AuthorizedApiClient from '~api/clients/authorizedApiClient';
 import ProductCacheService from '~api/services/productCache/productCacheService';
 

@@ -1,4 +1,4 @@
-import { SearchParameters, UuidViewModel } from '~api/interfaces/api';
+import type { SearchParameters, UuidViewModel } from '~api/interfaces/api';
 
 export interface ViewProductVariantStringProperty extends UuidViewModel {
     productVariantId: string;

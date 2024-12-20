@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
-import axios, { AxiosInstance, AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import { describe, it, expect, vi, beforeEach, type Mock } from 'vitest';
+import axios, { type AxiosInstance, AxiosError, type AxiosResponse, type InternalAxiosRequestConfig } from 'axios';
 import UnauthorizedApiClient from '~api/clients/unauthorizedApiClient';
 import { getAccessToken, getRefreshToken, saveTokens } from '~api/helpers/authentication';
 import AuthorizedApiClient from '~api/clients/authorizedApiClient';

@@ -1,5 +1,5 @@
-import { SearchParameters } from '~api/interfaces/api';
-import { CreateBooleanProperty, PatchBooleanProperty, ViewBooleanProperty } from '~api/interfaces/pim/properties/booleanProperty';
+import type { SearchParameters } from '~api/interfaces/api';
+import type { CreateBooleanProperty, PatchBooleanProperty, ViewBooleanProperty } from '~api/interfaces/pim/properties/booleanProperty';
 import AbstractDefaultService from '~api/services/abstractDefaultService';
 
 export default class BooleanPropertyService extends AbstractDefaultService<

@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
+import { describe, it, expect, vi, beforeEach, type Mock } from 'vitest';
 import AbstractDefaultService from '~api/services/abstractDefaultService';
 import StockItemService from '~api/services/stock/stockItemService';
 

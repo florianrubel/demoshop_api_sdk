@@ -1,8 +1,8 @@
-import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
-import { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import { describe, it, expect, vi, beforeEach, type Mock } from 'vitest';
+import { type AxiosResponse, type InternalAxiosRequestConfig } from 'axios';
+import type { AuthenticationTokenSet, SignInUser } from '~api/interfaces/authentication/signIn';
 import UnauthorizedApiClient from '~api/clients/unauthorizedApiClient';
 import SigninService from '~api/services/authentication/signInService';
-import { AuthenticationTokenSet, SignInUser } from '~api/interfaces/authentication/signIn';
 
 vi.mock('~api/clients/unauthorizedApiClient');
 

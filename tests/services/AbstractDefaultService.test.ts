@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, Mock, beforeEach } from 'vitest';
-import { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import { describe, it, expect, vi, type Mock, beforeEach } from 'vitest';
+import { type AxiosResponse, type InternalAxiosRequestConfig } from 'axios';
 import { PATCH_REPLACE } from '~api/constants/api';
 import AuthorizedApiClient from '~api/clients/authorizedApiClient';
 import AbstractDefaultService from '~api/services/abstractDefaultService'; // Update the path

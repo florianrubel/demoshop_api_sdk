@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
-import axios, { AxiosInstance } from 'axios';
+import { describe, it, expect, vi, beforeEach, type Mock } from 'vitest';
+import axios, { type AxiosInstance } from 'axios';
 import UnauthorizedApiClient from '~api/clients/unauthorizedApiClient'; // Update the import path
 
 vi.mock('axios');

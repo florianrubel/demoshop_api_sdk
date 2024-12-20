@@ -1,5 +1,5 @@
-import { SearchParameters } from '~api/interfaces/api';
-import { CreateProduct, PatchProduct, ViewProduct } from '~api/interfaces/pim/product';
+import type { SearchParameters } from '~api/interfaces/api';
+import type { CreateProduct, PatchProduct, ViewProduct } from '~api/interfaces/pim/product';
 import AbstractDefaultService from '~api/services/abstractDefaultService';
 
 export default class ProductService extends AbstractDefaultService<

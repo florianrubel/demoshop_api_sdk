@@ -1,5 +1,5 @@
 import { type AxiosResponse } from 'axios';
-import {
+import type {
     CreateStockItem,
     PatchStockItem,
     StockItemPaginationParameters,
