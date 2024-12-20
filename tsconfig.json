@@ -15,7 +15,10 @@
         "strict": true,
         "esModuleInterop": true,
         "composite": true,
-        "verbatimModuleSyntax" : true
+        "verbatimModuleSyntax" : true,
+        "forceConsistentCasingInFileNames": true,
+        "noUnusedLocals": true,
+        "strictNullChecks": true,
     },
     "include": [
         "eslint.config.js",

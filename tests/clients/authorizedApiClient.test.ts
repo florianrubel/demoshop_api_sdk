@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
 import { describe, it, expect, vi, beforeEach, type Mock } from 'vitest';
 import axios, { type AxiosInstance, AxiosError, type AxiosResponse, type InternalAxiosRequestConfig } from 'axios';
 import UnauthorizedApiClient from '~api/clients/unauthorizedApiClient';
@@ -18,7 +20,7 @@ describe('AuthorizedApiClient', () => {
     const mockSetUserFunction = vi.fn();
     const mockResetUserFunction = vi.fn();
 
-    // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+    // @ts-ignore: TS6133
     let authorizedApiClient: AuthorizedApiClient;
     let mockAxiosInstance: AxiosInstance;
     let mockUnauthorizedApiClient: { client: Mock };
