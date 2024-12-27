@@ -24,7 +24,7 @@ export default abstract class AbstractDefaultService<
         this.authorizedApiClient = new AuthorizedApiClient(baseURL, setUserFunction, resetUserFunction);
     }
 
-    public async getMultiple(params: SearchParametersType, abortSignal?: GenericAbortSignal): Promise<AxiosResponse<ViewType[]>> {
+    public async getMultiple(params?: SearchParametersType, abortSignal?: GenericAbortSignal): Promise<AxiosResponse<ViewType[]>> {
         const query = getCleanedQueryString(params);
         return this.authorizedApiClient.client.get(`?${query}`, { signal: abortSignal });
     }

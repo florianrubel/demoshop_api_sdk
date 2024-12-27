@@ -6,7 +6,7 @@ import type {
 
 import UnauthorizedApiClient from '~api/clients/unauthorizedApiClient';
 
-export default class SigninService {
+export default class SignInService {
     public unauthorizedApiClient: UnauthorizedApiClient;
 
     constructor() {
