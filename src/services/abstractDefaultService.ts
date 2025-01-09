@@ -34,6 +34,11 @@ export default abstract class AbstractDefaultService<
         return this.authorizedApiClient.client.get(`/(${ids.join(',')})?${query}`, { signal: abortSignal });
     }
 
+    public async getMultipleByIdsByPost(ids: string[], params?: ShapingWithOrderingParameters, abortSignal?: GenericAbortSignal): Promise<AxiosResponse<ViewType[]>> {
+        const query = getCleanedQueryString(params);
+        return this.authorizedApiClient.client.post(`/ids?${query}`, ids, { signal: abortSignal });
+    }
+
     public async getOneOrDefault(id: string, params?: ShapingParameters, abortSignal?: GenericAbortSignal): Promise<AxiosResponse<ViewType>> {
         const query = getCleanedQueryString(params);
         return this.authorizedApiClient.client.get(`/${id}?${query}`, { signal: abortSignal });

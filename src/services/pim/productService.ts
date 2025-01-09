@@ -13,7 +13,7 @@ export default class ProductService extends AbstractDefaultService<
         resetUserFunction: CallableFunction,
     ) {
         super(
-            'https://localhost:7210/product',
+            'https://localhost:7210/products',
             setUserFunction,
             resetUserFunction,
         );

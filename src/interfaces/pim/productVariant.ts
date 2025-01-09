@@ -19,3 +19,8 @@ export type PatchProductVariant = Partial<Omit<CreateProductVariant, 'productId'
 export interface ProductVariantPaginationParameters extends PaginationParameters {
     productIds?: string;
 }
+
+export interface ProductVariantPropertyRelation extends UuidViewModel {
+    productVariantId: string;
+    propertyId: string;
+}

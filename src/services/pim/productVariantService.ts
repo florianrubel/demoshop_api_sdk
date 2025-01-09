@@ -17,7 +17,7 @@ export default class ProductVariantService extends AbstractDefaultService<
         resetUserFunction: CallableFunction,
     ) {
         super(
-            'https://localhost:7210/product-variant',
+            'https://localhost:7210/product-variants',
             setUserFunction,
             resetUserFunction,
         );

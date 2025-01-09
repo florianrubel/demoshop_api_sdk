@@ -17,7 +17,7 @@ export default class ProductVariantStringPropertyService extends AbstractWithDel
         resetUserFunction: CallableFunction,
     ) {
         super(
-            'https://localhost:7210/product-variant-string-property',
+            'https://localhost:7210/product-variant-string-properties',
             setUserFunction,
             resetUserFunction,
         );
