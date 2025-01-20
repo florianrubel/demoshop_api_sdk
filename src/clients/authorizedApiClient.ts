@@ -11,6 +11,7 @@ import type { AuthenticationTokenSet } from '~api/interfaces/authentication/sign
 
 import { getAccessToken, getRefreshToken, saveTokens } from '~api/helpers/authentication';
 import UnauthorizedApiClient from '~api/clients/unauthorizedApiClient';
+import SignInService from '~api/services/authentication/signInService';
 
 interface ExtendedAxiosRequestConfig extends InternalAxiosRequestConfig<unknown> {
     _retry?: boolean;
@@ -82,16 +83,11 @@ export default class AuthorizedApiClient {
                 return;
             }
 
-            // TODO: Try to use a service
-            const options: AxiosRequestConfig = {
-                method: 'post',
-                url: '/authentication/signin/refresh',
-                data: {
-                    accessToken: getAccessToken(),
-                    refreshToken: getRefreshToken(),
-                },
-            };
-            this.unauthorizedApiClient.client(options)
+            const signInService = new SignInService
+            signInService.refreshAccessToken({
+                accessToken: getAccessToken() as string,
+                refreshToken: getRefreshToken() as string,
+            })
                 .then((response: AxiosResponse<AuthenticationTokenSet>) => {
                     saveTokens(response.data);
                     this.setUserFunction();

@@ -1,13 +1,11 @@
-import type { UuidViewModel } from '~api/interfaces/api';
+import type { CreateProperty, ViewProperty } from '~api/interfaces/pim/properties/property';
 
-export interface ViewNumericProperty extends UuidViewModel {
-    name: string;
+export interface ViewNumericProperty extends ViewProperty {
     minValue: number | null;
     maxValue: number | null;
 }
 
-export interface CreateNumericProperty {
-    name: string;
+export interface CreateNumericProperty extends CreateProperty {
     minValue?: null;
     maxValue?: null;
 }

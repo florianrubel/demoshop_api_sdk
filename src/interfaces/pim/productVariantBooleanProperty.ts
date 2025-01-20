@@ -1,23 +1,9 @@
-import type { PaginationParameters, UuidViewModel } from '~api/interfaces/api';
+import type { CreateProductVariantRelation, PatchProductVariantRelation, ProductVariantRelationPaginationParameters, ViewProductVariantRelation } from '~api/interfaces/pim/productVariantRelation';
 
-export interface ViewProductVariantBooleanProperty extends UuidViewModel {
-    productVariantId: string;
-    propertyId: string;
-    value: boolean;
-}
+export type ViewProductVariantBooleanProperty = ViewProductVariantRelation<boolean>;
 
-export interface CreateProductVariantBooleanProperty {
-    productVariantId: string;
-    propertyId: string;
-    value: boolean;
-}
+export type CreateProductVariantBooleanProperty = CreateProductVariantRelation<boolean>;
 
-export interface PatchProductVariantBooleanProperty {
-    value: boolean;
-}
+export type PatchProductVariantBooleanProperty = PatchProductVariantRelation<boolean>;
 
-export interface ProductVariantBooleanPropertyPaginationParameters extends PaginationParameters {
-    productVariantIds?: string;
-    propertyIds?: string;
-    value?: boolean;
-}
+export type ProductVariantBooleanPropertyPaginationParameters = ProductVariantRelationPaginationParameters<boolean>;

@@ -13,7 +13,7 @@ export default abstract class AbstractWithDeleteService<
         PatchType,
         SearchParametersType
     > {
-    public async delete(deleteObjs: ViewType[]): Promise<AxiosResponse<ViewType[]>> {
-        return this.authorizedApiClient.client.delete(`(${deleteObjs})`);
+    public async delete(deleteIds: string[]): Promise<AxiosResponse<ViewType[]>> {
+        return this.authorizedApiClient.client.delete('', { data: deleteIds });
     }
 }

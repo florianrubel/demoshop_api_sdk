@@ -1,23 +1,9 @@
-import type { SearchParameters, UuidViewModel } from '~api/interfaces/api';
+import type { ViewProductVariantRelation, CreateProductVariantRelation, PatchProductVariantRelation, ProductVariantRelationSearchParameters } from '~api/interfaces/pim/productVariantRelation';
 
-export interface ViewProductVariantStringProperty extends UuidViewModel {
-    productVariantId: string;
-    propertyId: string;
-    value: string;
-}
+export type ViewProductVariantStringProperty = ViewProductVariantRelation<string>;
 
-export interface CreateProductVariantStringProperty {
-    productVariantId: string;
-    propertyId: string;
-    value: string;
-}
+export type CreateProductVariantStringProperty = CreateProductVariantRelation<string>;
 
-export interface PatchProductVariantStringProperty {
-    value: string;
-}
+export type PatchProductVariantStringProperty = PatchProductVariantRelation<string>;
 
-export interface ProductVariantStringPropertySearchParameters extends SearchParameters {
-    productVariantIds?: string;
-    propertyIds?: string;
-    value?: string;
-}
+export type ProductVariantStringPropertySearchParameters = ProductVariantRelationSearchParameters<string>;

@@ -1,11 +1,7 @@
-import type { UuidViewModel } from '~api/interfaces/api';
+import type { CreateProperty, PatchProperty, ViewProperty } from '~api/interfaces/pim/properties/property';
 
-export interface ViewBooleanProperty extends UuidViewModel {
-    name: string;
-}
+export type ViewBooleanProperty = ViewProperty;
 
-export interface CreateBooleanProperty {
-    name: string;
-}
+export type CreateBooleanProperty = CreateProperty;
 
-export type PatchBooleanProperty = Partial<CreateBooleanProperty>;
+export type PatchBooleanProperty = PatchProperty;
