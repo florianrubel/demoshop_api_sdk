@@ -35,6 +35,16 @@ export interface UuidViewModel {
     updatedAt: string | null;
 }
 
+export interface ApiError {
+    errorCode?: string;
+    details?: string;
+    conflicts?: Record<string, string []>
+}
+
+export interface CustomErrorResponseBody {
+    errors: ApiError[];
+}
+
 export interface ErrorResponseBody {
     errors?: Record<string, string[]>
     status?: number;
