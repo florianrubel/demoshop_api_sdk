@@ -2,8 +2,6 @@ import type { AxiosResponse, GenericAbortSignal } from 'axios';
 
 import type { ProductSearchRequest, ProductSearchResult } from '~api/interfaces/productSearch/productSearch';
 
-import { getCleanedQueryString } from '~api/helpers/misc';
-
 import UnauthorizedApiClient from '~api/clients/unauthorizedApiClient';
 
 export default class ProductSearchService {
@@ -14,7 +12,6 @@ export default class ProductSearchService {
     }
 
     public async search(params: ProductSearchRequest, abortSignal?: GenericAbortSignal): Promise<AxiosResponse<ProductSearchResult>> {
-        const query = getCleanedQueryString(params);
-        return this.unauthorizedApiClient.client.post(`?${query}`, { signal: abortSignal });
+        return this.unauthorizedApiClient.client.post('', params, { signal: abortSignal });
     }
 }

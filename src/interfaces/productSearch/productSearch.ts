@@ -22,15 +22,28 @@ export interface ProductSearchRequest {
     page?: number;
     distinct?: boolean;
     searchQuery?: string;
-    stringFacets?: Record<string, string[]>;
-    numericFacets?: Record<string, NumericRange>;
-    booleanFacets?: Record<string, boolean>;
+    stringFilters?: Record<string, string[]>;
+    numericFilters?: Record<string, NumericRange>;
+    booleanFilters?: Record<string, boolean[]>;
 }
 
+export interface BooleanFacet {
+    false: number;
+    true: number;
+}
+
+export type NumericFacet = Record<string, number>;
+
+export type StringFacet = Record<string, number>;
+
 export interface ProductSearchResult {
-    booleanFacets: Record<string, Record<string, number>>;
-    numericFacets: Record<string, Record<string, number>>;
-    stringFacets: Record<string, Record<string, number>>;
+    booleanFacets: Record<string, BooleanFacet>;
+    numericFacets: Record<string, NumericFacet>;
+    stringFacets: Record<string, StringFacet>;
     priceInCents: NumericRange;
+    numericFacetsRanges: Record<string, NumericRange>;
     products: ProductSearchItem[];
+    stringFilters?: Record<string, string[]>;
+    numericFilters?: Record<string, NumericRange>;
+    booleanFilters?: Record<string, boolean[]>;
 }

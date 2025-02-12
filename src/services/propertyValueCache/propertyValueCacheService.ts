@@ -15,4 +15,8 @@ export default class PropertyValueCacheService {
     public async buildCache(): Promise<AxiosResponse> {
         return this.authorizedApiClient.client.post('/build-cache');
     }
+
+    public async getValues(propertyId: string): Promise<AxiosResponse<string[]>> {
+        return this.authorizedApiClient.client.get(`/property-values/${propertyId}`);
+    }
 }
